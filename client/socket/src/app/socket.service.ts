@@ -15,11 +15,11 @@ export class SocketService {
   setupSocketConnection() {
     this.socket = io(environment.SOCKET_ENDPOINT);
     console.log("connected...")
-    this.socket.on('msg', (data: string) => {
+    this.socket.on('msg', (data) => {
       this.getMsg.next(data);
     });
   }
-  sendMessage(msg:string){
+  sendMessage(msg){
     this.socket.emit("msg",msg);
   }
 

@@ -1,5 +1,5 @@
 const io = require('socket.io')(3000);
-
+console.log("Server stared...");
 users = {};
 io.on("connection",socket=>{
     // socket.emit("msg","Selam");

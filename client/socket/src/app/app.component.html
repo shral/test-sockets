@@ -1,6 +1,27 @@
+
+
+  <label>
+    <input
+    type="checkbox"
+    (ngModelChange)="filter.chekbox1 = $event;filterChanged()"
+    [(ngModel)]="filter.chekbox1"
+    > Test checkbox 1
+</label><br>
+<label>
+
+  <input
+  type="checkbox"
+  (ngModelChange)="filter.chekbox2 = $event;filterChanged()"
+  [(ngModel)]="filter.chekbox2"
+  > Test checkbox 2
+</label><br>
+<input type="text" [(ngModel)]="filter.input" (ngModelChange)="filterChanged()" placeholder="Test">
+<br>
+
+
+<hr>
 <ul>
   <li *ngFor="let item of commingMsg">{{item}}</li>
 </ul>
-
 <input type="text" placeholder="Message" [(ngModel)]="msg">
 <button (click)="sendMsg()">Send</button>
